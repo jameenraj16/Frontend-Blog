@@ -15,6 +15,7 @@ import { authActions } from "./store";
 import OpenBlog from "./Components/OpenBlog";
 import { ThemeProvider, createTheme } from "@mui/material";
 import MyAccount from "./Components/MyAccount";
+import Deleted from "./Components/Deleted";
 
 //Custom font for mui components
 const theme = createTheme({
@@ -56,6 +57,7 @@ const App = () => {
               <Route path="/myBlogs/:id" element={<BlogDetail />} />
               <Route path="/myaccount/:id" element={<MyAccount />} />
               <Route path="/openblog/:id" element={<OpenBlog />} />
+              <Route path="/deleted" element={<Deleted />} />
               <Route path="/blogs/add" element={<AddBlog />} />
               <Route path="*" element={<Missing />} />
             </>

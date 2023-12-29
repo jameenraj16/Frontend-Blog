@@ -27,7 +27,7 @@ const Blog = ({ title, description, image, userName, isUser, id }) => {
     try {
       const res = await axios.delete(`${API_URL}api/blog/${id}`);
       const data = res.data;
-      window.location.reload();
+      navigate("/deleted")
       return data;
     } catch (err) {
       console.log();
