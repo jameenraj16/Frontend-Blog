@@ -35,7 +35,12 @@ const Blog = ({ title, description, image, userName, isUser, id }) => {
   };
   //HandeDelete
   const handleDelete = () => {
-    deleteRequest()
+    const confirmDelete = window.confirm('Are you sure you want to delete this?');
+    if(confirmDelete){
+      deleteRequest()
+    }else{
+      navigate("/blogs")
+    }
   };
 
   //HandleOpenFullBlog
